@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../styles/contact.css" />
+  </head>
+  <body>
+    <header class="container">
+      <div>
+        <a href="../pages/index.html">
+          <svg width="298" height="60">
+            <use href="../images/sprite.svg#logo_contact" />
+          </svg>
+        </a>
+      </div>
+
+      <nav>
+        <div class="flex">
+          <button class="language-button">УК</button>
+          <button class="language-button">РУ</button>
+          <button class="language-button active">EN</button>
+          <nav class="header_nav_up">
+            <a href="#" class="header_up_a">Kyiv, Mechnikova str, 14/1</a>
+            <a href="#" class="header_up_a bold">0800 211 927</a>
+            <a href="#" class="header_up_a"
+              ><img src="../images/Facebook-Header.png" alt="facebook"
+            /></a>
+          </nav>
+        </div>
+
+        <nav class="flex header_nav_down">
+          <a href="../pages/about.html">about us</a>
+          <a href="#">services</a>
+          <a href="#">team</a>
+          <a href="#">publications</a>
+          <a href="#" class="active">contact</a>
+        </nav>
+      </nav>
+
+      <div class="burger">
+        <span></span>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="flex contact-block">
+          <div class="lc">
+            <div>
+              <p>Kyiv, <br />Mechnikova str, 14</p>
+            </div>
+            <div>
+              <p class="p-seccond">0800 211 927</p>
+              <a href="#">contact@forstudy.space</a>
+            </div>
+            <div class="bold">
+              <a href="#" class="a-third">
+                <svg width="38" height="38">
+                  <use href="../images/sprite.svg#facebook" />
+                </svg>
+                OUR PAGE <br />
+                ON FACEBOOK
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" action="#" method="get">
+            <h1>We would like to help you</h1>
+            <input
+              class="input"
+              placeholder="Name"
+              name="name"
+              required
+              type="text"
+              maxlength="36"
+              id="test"
+            />
+            <textarea
+              class="input"
+              placeholder="Message"
+              name="message"
+              required
+              maxlength="400"
+            ></textarea>
+            <h3 class="caps">How to answer you?</h3>
+            <input
+              class="input"
+              name="phone"
+              required
+              placeholder="Phone format: 123-456-7890"
+              type="tel"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              maxlength="16"
+            />
+            <input
+              class="input"
+              name="email"
+              required
+              placeholder="Email"
+              maxlength="60"
+              type="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            />
+            <div class="flex-center">
+              <button
+                class="btn primary"
+                type="submit"
+                aria-label="Send request"
+              >
+                Send message
+              </button>
+            </div>
+            <div class="result"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container flex">
+        <div class="lc">
+          <div class="flex-item up">
+            <p>Kyiv, Mechnikova str, 14/1</p>
+            <a class="map bold dot" href="#">ON MAP</a>
+          </div>
+          <div class="flex-item">
+            <svg width="38" height="38">
+              <use href="../images/sprite.svg#facebook" />
+            </svg>
+            <a class="bold alt dot" href="#">0800 211 927</a>
+            <a class="dot bold" href="#">contact@forstudy.space</a>
+          </div>
+        </div>
+        <div>
+          <p class="p-footer">© 2021 HLEGAL Law company, LLC</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelector(".burger").addEventListener("click", function () {
+        this.classList.toggle("active");
+        document.querySelector("nav").classList.toggle("open");
+
+        document.body.style.overflow = "hidden";
+
+        if (!this.classList.contains("active")) {
+          document.body.style.overflow = "";
+          document.documentElement.style.overflow = "";
+        }
+      });
+    </script>
+  </body>
+</html>
